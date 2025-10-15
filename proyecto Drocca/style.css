@@ -1,0 +1,386 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    /*background-color: rgb(59, 31, 31); */
+    color: black;
+    font-family: 'Castoro Titling', cursiva;
+}
+/*encabezado*/
+header{
+    text-align: center;
+    font-size: 45px;
+    background-image: url(images/messicr7.jpeg);
+    height: 609px;
+}
+header h1{
+    color: beige;
+    margin: 0;
+}
+/*barra de navegación*/
+.logo{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.logo img{
+    width: 20px;
+    height: 20px;
+}
+.navegador ul{
+    text-align: center;
+    background-color: black;
+}
+.navegador ul li{
+    display: inline;
+}
+.navegador ul li a{
+    color: beige;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 0 30px;
+}
+/*sección de hombres*/
+.seccion-hombres{
+    background-color: rgb(57, 16, 16);
+    text-align: center;
+}
+.seccion-hombres h2{
+    color: beige;
+}
+.hombres{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.hombres h2{
+    color: beige;
+}
+.hombres ul li{
+    display: inline;
+}
+.hombres ul li a{
+    color: beige;
+    text-decoration: none;
+    margin: 20px;
+}
+/*Trajes de hombre*/
+.trajes{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.fotos-trajes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(35, 33, 33);
+}
+.fotos-trajes img{
+    border-radius: 30px;
+    transition: transform 1.3s ease-out;
+    margin-top: 40px;
+    height: 500px;
+    width: 410px;
+}
+.fotos-trajes img:hover{
+    transform: scale(1.05);
+}
+.fotos-trajes figcaption{
+    color: beige;
+}
+.trajes h3{
+    color: beige;
+}
+/*Relojes*/
+.relojes{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.relojes h3{
+    color: beige;
+}
+.fotos-relojes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(35, 33, 33);
+}
+.fotos-relojes img{
+    border-radius: 10%;
+    transition: transform 1.3s ease-out;
+    margin-top: 40px;
+    height: 500px;
+    width: 410px;
+}
+.fotos-relojes img:hover{
+    transform: scale(1.05);
+}
+.fotos-relojes figcaption{
+    color: beige;
+}
+/*anteojos*/
+.anteojos{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.anteojos h3{
+    color: beige;
+}
+.fotos-anteojos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(35, 33, 33);
+}
+.fotos-anteojos img{
+    border-radius: 10%;
+    transition: transform 1.3s ease-out;
+    margin-top: 40px;
+    width: 400px;
+    height: 500px;
+}
+.fotos-anteojos img:hover{
+    transform: scale(1.05);
+}
+.fotos-anteojos figcaption{
+    color: beige;
+}
+/*dijes*/
+.dijes{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.dijes h3{
+    color: beige;
+}
+.fotos-dijes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(35, 33, 33);
+}
+.fotos-dijes img{
+    border-radius: 10%;
+    transition: transform 1.3s ease-out;
+    margin-top: 40px;
+    height: 500px;
+    width: 400px;
+}
+.fotos-dijes img:hover{
+    transform: scale(1.05);
+}
+.fotos-dijes figcaption{
+    color: beige;
+}
+/*sección de mujeres*/
+.seccion-mujeres{
+    background-color: rgb(57, 16, 16);
+    text-align: center;
+}
+.seccion-mujeres h2{
+    color: beige;
+}
+.mujeres{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.mujeres h2{
+    color: beige;
+}
+.mujeres ul li{
+    display: inline;
+}
+.mujeres ul li a{
+    color: beige;
+    margin: 20px;
+    text-decoration: none;
+}
+/*trajes de mujeres*/
+.trajesm{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.trajesm h3{
+    color: beige;
+}
+.fotos-trajesm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(35, 33, 33);
+}
+.fotos-trajesm img{
+    border-radius: 10%;
+    transition: transform 1.3s ease-out;
+    margin-top: 40px;
+    width: 405px;
+    height: 500px;
+}
+.fotos-trajesm img:hover{
+    transform: scale(1.05);
+}
+.fotos-trajesm figcaption{
+    color: beige;
+}
+/*carteras*/
+.carteras{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.carteras h3{
+    color: beige;
+}
+.fotos-carteras{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(35, 33, 33);
+}
+.fotos-carteras img{
+    border-radius: 10%;
+    transition: transform 1.3s ease-out;
+    margin-top: 40px;
+    width: 405px;
+    height: 500px;
+}
+.fotos-carteras img:hover{
+    transform: scale(1.05);
+}
+.fotos-carteras figcaption{
+    color: beige;
+}
+/*colgantes*/
+.colgantes{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.colgantes h3{
+    color: beige;
+}
+.fotos-colgantes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(35, 33, 33);
+}
+.fotos-colgantes img{
+    border-radius: 10%;
+    transition: transform 1.3s ease-out;
+    margin-top: 40px;
+    width: 405px;
+    height: 500px;
+}
+.fotos-colgantes img:hover{
+    transform: scale(1.05);
+}
+.fotos-colgantes figcaption{
+    color: beige;
+}
+/*perfumes*/
+.perfumes{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.perfumes h3{
+    color: beige;
+}
+.fotos-perfumes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(35, 33, 33);
+}
+.fotos-perfumes img{
+    border-radius: 10%;
+    transition: transform 1.3s ease-out;
+    margin-top: 40px;
+    width: 405px;
+    height: 500px;
+}
+.fotos-perfumes img:hover{
+    transform: scale(1.05);
+}
+.fotos-perfumes figcaption{
+    color: beige;
+}
+/*sobre nosotros*/
+.nosotros{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.nosotros h2{
+    color: beige;
+}
+.nosotros p{
+    color: beige;
+}
+/*mapa*/
+.mapa{
+    text-align: center;
+    background-color: rgb(57, 16, 16);
+}
+.mapa h2{
+    color: beige;
+}
+.mapa p{
+    color: beige;
+}
+.mapa iframe{
+    border-radius: 10%;
+}
+/*footer*/
+footer{
+    background-color: rgb(57, 16, 16);
+    color: beige;
+}
+/*contacto*/
+.contacto{
+    background-color: rgb(57, 16, 16);
+}
+.contacto h2{
+    color: beige;
+    text-align: center;
+}
+.contacto p{
+    color: beige;
+    text-align: center;
+}
+.contacto ul{
+    display: flex;
+    justify-content: center;
+}
+.contacto li{
+    color: beige;
+    display: inline;
+    margin: 0 15px;
+}
+.contacto a{
+    color: beige;
+    text-decoration: none;
+}
+.copyright{
+    color: beige;
+    text-align: center;
+}
+
+figcaption{
+    margin-top: 20px;
+}
+
+button{
+    background-color: rgb(35, 35, 70);  
+    color: beige;
+}
+
+button:hover{
+    background-color: rgb(7, 7, 36);
+}
+
+.fotos-trajes img:hover,
+.fotos-relojes img:hover,
+.fotos-anteojos img:hover,
+.fotos-dijes img:hover,
+.fotos-trajesm img:hover,
+.fotos-carteras img:hover,
+.fotos-colgantes img:hover,
+.fotos-perfumes img:hover {
+    transition: transform 0.3s ease;
+}
