@@ -1,228 +1,146 @@
-let trajesh = [
-    { nombre: "$1500", imagen: "images/traje1.jpeg" },
-    { nombre: "$1600", imagen: "images/traje2.jpeg" },
-    { nombre: "$1650", imagen: "images/traje3.jpeg" },
-    { nombre: "$1700", imagen: "images/traje4.jpeg" },
-  ];
-  
-  function cargarTrajesH() { 
-    var container = document.getElementById("ContainerTrajesH-id");
-      
-    trajesh.forEach(function(producto) {
-      var productoElement = document.createElement("div");
-      productoElement.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <button onclick="agregarAlCarrito('${producto.nombre}', '${producto.nombre}')">Comprar Traje</button>
-      `;
-      container.appendChild(productoElement);
-    });
-  }
-  
-  let relojes = [
-    { nombre: "$300", imagen: "images/reloj1.jpeg" },
-    { nombre: "$320", imagen: "images/reloj2.jpeg" },
-    { nombre: "$350", imagen: "images/reloj3.jpeg" },
-    { nombre: "$400", imagen: "images/reloj4.jpeg" },
-    { nombre: "$420", imagen: "images/reloj5.jpeg" },
-    { nombre: "$450", imagen: "images/reloj6.jpeg" },
-  ];
-  
-  function cargarRelojes() { 
-    var container = document.getElementById("ContainerRelojes-id");
-      
-    relojes.forEach(function(producto) {
-      var productoElement = document.createElement("div");
-      productoElement.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <button onclick="agregarAlCarrito('${producto.nombre}', '${producto.nombre}')">Comprar Reloj</button>
-      `;
-      container.appendChild(productoElement);
-    });
-  }
-  
-  window.onload = function() {
-    cargarTrajesH();
-    cargarRelojes();
-  };
+const collections = [
+  {
+    container: "ContainerTrajesH-id",
+    category: "Traje",
+    products: [
+      { price: 1500, image: "images/traje1.jpeg" },
+      { price: 1600, image: "images/traje2.jpeg" },
+      { price: 1650, image: "images/traje3.jpeg" },
+      { price: 1700, image: "images/traje4.jpeg" },
+    ],
+  },
+  {
+    container: "ContainerRelojes-id",
+    category: "Reloj",
+    products: [
+      { price: 300, image: "images/reloj1.jpeg" },
+      { price: 320, image: "images/reloj2.jpeg" },
+      { price: 350, image: "images/reloj3.jpeg" },
+      { price: 400, image: "images/reloj4.jpeg" },
+      { price: 420, image: "images/reloj5.jpeg" },
+      { price: 450, image: "images/reloj6.jpeg" },
+    ],
+  },
+  {
+    container: "ContainerAnteojos-id",
+    category: "Anteojos",
+    products: [
+      { price: 300, image: "images/anteojos1.jpeg" },
+      { price: 320, image: "images/anteojos2.jpeg" },
+    ],
+  },
+  {
+    container: "ContainerDijes-id",
+    category: "Dije",
+    products: [
+      { price: 150, image: "images/dije1.jpeg" },
+      { price: 150, image: "images/dije2.jpeg" },
+    ],
+  },
+  {
+    container: "ContainerTrajesM-id",
+    category: "Traje",
+    products: [
+      { price: 1700, image: "images/trajesm1.jpeg" },
+      { price: 1750, image: "images/trajesm2.jpeg" },
+      { price: 1800, image: "images/trajesm3.jpeg" },
+      { price: 1900, image: "images/trajesm4.jpeg" },
+    ],
+  },
+  {
+    container: "ContainerCarteras-id",
+    category: "Cartera",
+    products: [
+      { price: 700, image: "images/cartera1.jpeg" },
+      { price: 750, image: "images/cartera2.jpeg" },
+      { price: 800, image: "images/cartera3.jpeg" },
+      { price: 900, image: "images/cartera4.jpeg" },
+    ],
+  },
+  {
+    container: "ContainerColgantes-id",
+    category: "Colgante",
+    products: [
+      { price: 100, image: "images/colgante1.jpeg" },
+      { price: 150, image: "images/colgante2.jpeg" },
+      { price: 200, image: "images/colgante3.jpeg" },
+      { price: 200, image: "images/colgante4.jpeg" },
+    ],
+  },
+  {
+    container: "ContainerPerfumes-id",
+    category: "Perfume",
+    products: [
+      { price: 100, image: "images/perfume1.jpeg" },
+      { price: 150, image: "images/perfume2.jpeg" },
+      { price: 200, image: "images/perfume3.jpeg" },
+      { price: 300, image: "images/perfume4.jpeg" },
+    ],
+  },
+];
 
+const bagCount = document.getElementById("bag-count");
+const toast = document.getElementById("toast");
+let itemCount = 0;
+let toastTimeout;
 
-  let anteojos = [
-    { nombre: "$300", imagen: "images/anteojos1.jpeg" },
-    { nombre: "$320", imagen: "images/anteojos2.jpeg" },
-  ];
-  
-  function cargarAnteojos() { 
-    var container = document.getElementById("ContainerAnteojos-id");
-      
-    anteojos.forEach(function(producto) {
-      var productoElement = document.createElement("div");
-      productoElement.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <button onclick="agregarAlCarrito('${producto.nombre}', '${producto.nombre}')">Comprar Anteojos</button>
-      `;
-      container.appendChild(productoElement);
-    });
-  }
-  
-  window.onload = function() {
-    cargarTrajesH();
-    cargarRelojes();
-    cargarAnteojos();
-  };
+function formatPrice(price) {
+  return `$ ${price.toLocaleString("es-AR")}`;
+}
 
+function addToBag(productName) {
+  itemCount += 1;
+  bagCount.textContent = itemCount;
+  toast.textContent = `${productName} agregado a tu bolsa`;
+  toast.classList.add("is-visible");
 
-  let dijes = [
-    { nombre: "$150", imagen: "images/dije1.jpeg" },
-    { nombre: "$150", imagen: "images/dije2.jpeg" },
-  ];
-  
-  function cargarDijes() { 
-    var container = document.getElementById("ContainerDijes-id");
-      
-    dijes.forEach(function(producto) {
-      var productoElement = document.createElement("div");
-      productoElement.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <button onclick="agregarAlCarrito('${producto.nombre}', '${producto.nombre}')">Comprar Dije</button>
-      `;
-      container.appendChild(productoElement);
-    });
-  }
-  
-  window.onload = function() {
-    cargarTrajesH();
-    cargarRelojes();
-    cargarAnteojos();
-    cargarDijes();
-  };
+  window.clearTimeout(toastTimeout);
+  toastTimeout = window.setTimeout(() => {
+    toast.classList.remove("is-visible");
+  }, 2400);
+}
 
+function renderProduct(product, category, index) {
+  const card = document.createElement("article");
+  card.className = "product-card";
 
+  const imageWrap = document.createElement("div");
+  imageWrap.className = "product-image-wrap";
 
-  let trajesm = [
-    { nombre: "$1700", imagen: "images/trajesm1.jpeg" },
-    { nombre: "$1750", imagen: "images/trajesm2.jpeg" },
-    { nombre: "$1800", imagen: "images/trajesm3.jpeg" },
-    { nombre: "$1900", imagen: "images/trajesm4.jpeg" },
-  ];
-  
-  function cargarTrajesM() { 
-    var container = document.getElementById("ContainerTrajesM-id");
-      
-    trajesm.forEach(function(producto) {
-      var productoElement = document.createElement("div");
-      productoElement.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <button onclick="agregarAlCarrito('${producto.nombre}', '${producto.nombre}')">Comprar Traje</button>
-      `;
-      container.appendChild(productoElement);
-    });
-  }
-  
-  window.onload = function() {
-    cargarTrajesH();
-    cargarRelojes();
-    cargarAnteojos();
-    cargarDijes();
-    cargarTrajesM();
-  };
+  const image = document.createElement("img");
+  image.src = product.image;
+  image.alt = `${category} ${index + 1}`;
+  image.loading = "lazy";
+  imageWrap.appendChild(image);
 
+  const info = document.createElement("div");
+  info.className = "product-info";
 
-  let carteras = [
-    { nombre: "$700", imagen: "images/cartera1.jpeg" },
-    { nombre: "$750", imagen: "images/cartera2.jpeg" },
-    { nombre: "$800", imagen: "images/cartera3.jpeg" },
-    { nombre: "$900", imagen: "images/cartera4.jpeg" },
-  ];
-  
-  function cargarCarteras() { 
-    var container = document.getElementById("ContainerCarteras-id");
-      
-    carteras.forEach(function(producto) {
-      var productoElement = document.createElement("div");
-      productoElement.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <button onclick="agregarAlCarrito('${producto.nombre}', '${producto.nombre}')">Comprar Cartera</button>
-      `;
-      container.appendChild(productoElement);
-    });
-  }
-  
-  window.onload = function() {
-    cargarTrajesH();
-    cargarRelojes();
-    cargarAnteojos();
-    cargarDijes();
-    cargarTrajesM();
-    cargarCarteras();
-  };
+  const details = document.createElement("div");
+  const name = document.createElement("p");
+  name.className = "product-name";
+  name.textContent = `${category} ${String(index + 1).padStart(2, "0")}`;
 
+  const price = document.createElement("p");
+  price.className = "product-price";
+  price.textContent = formatPrice(product.price);
+  details.append(name, price);
 
-  let colgantes = [
-    { nombre: "$100", imagen: "images/colgante1.jpeg" },
-    { nombre: "$150", imagen: "images/colgante2.jpeg" },
-    { nombre: "$200", imagen: "images/colgante3.jpeg" },
-    { nombre: "$200", imagen: "images/colgante4.jpeg" },
-  ];
-  
-  function cargarColgantes() { 
-    var container = document.getElementById("ContainerColgantes-id");
-      
-    colgantes.forEach(function(producto) {
-      var productoElement = document.createElement("div");
-      productoElement.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <button onclick="agregarAlCarrito('${producto.nombre}', '${producto.nombre}')">Comprar Colgante</button>
-      `;
-      container.appendChild(productoElement);
-    });
-  }
-  
-  window.onload = function() {
-    cargarTrajesH();
-    cargarRelojes();
-    cargarAnteojos();
-    cargarDijes();
-    cargarTrajesM();
-    cargarCarteras();
-    cargarColgantes();
-  };
+  const button = document.createElement("button");
+  button.className = "add-to-bag";
+  button.type = "button";
+  button.textContent = "Agregar +";
+  button.setAttribute("aria-label", `Agregar ${name.textContent} a la bolsa`);
+  button.addEventListener("click", () => addToBag(name.textContent));
 
+  info.append(details, button);
+  card.append(imageWrap, info);
+  return card;
+}
 
-  let perfumes = [
-    { nombre: "$100", imagen: "images/perfume1.jpeg" },
-    { nombre: "$150", imagen: "images/perfume2.jpeg" },
-    { nombre: "$200", imagen: "images/perfume3.jpeg" },
-    { nombre: "$300", imagen: "images/perfume4.jpeg" },
-  ];
-  
-  function cargarPerfumes() { 
-    var container = document.getElementById("ContainerPerfumes-id");
-      
-    perfumes.forEach(function(producto) {
-      var productoElement = document.createElement("div");
-      productoElement.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}">
-        <h3>${producto.nombre}</h3>
-        <button onclick="agregarAlCarrito('${producto.nombre}', '${producto.nombre}')">Comprar Perfume</button>
-      `;
-      container.appendChild(productoElement);
-    });
-  }
-  
-  window.onload = function() {
-    cargarTrajesH();
-    cargarRelojes();
-    cargarAnteojos();
-    cargarDijes();
-    cargarTrajesM();
-    cargarCarteras();
-    cargarColgantes();
-    cargarPerfumes();
-  };
+collections.forEach((collection) => {
+  const container = document.getElementById(collection.container);
+  collection.products.forEach((product, index) => {
+    container.appendChild(renderProduct(product, collection.category, index));
+  });
+});

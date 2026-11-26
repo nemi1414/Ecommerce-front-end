@@ -2,140 +2,158 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Drocca</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f3ee">
+    <meta name="description" content="Drocca: una selección de indumentaria y accesorios para todos los días.">
+    <title>Drocca — Estilo que perdura</title>
     <link rel="icon" href="images/icono.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Castoro:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="js/main.js"></script>
-    <!--Alumno: Juan Ignacio Nemi-->
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Drocca</h1>
-        </header>
-        <nav class="navegador">
-            <ul>
-                <li><a href="#hombres">Hombres</a></li>
-                <li><a href="#mujeres">Mujeres</a></li>
-                <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-                <li><a href="#mapa">Local</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <figure class="logo">
-                <a href="index.html"><img src="images/icono.ico" alt="logo"></a>
-            </figure>
+    <div class="announcement">ESTILO ATEMPORAL · SELECCIÓN DROCCA</div>
+    <header class="site-header">
+        <a class="wordmark" href="#inicio" aria-label="Drocca, inicio">drocca<span>.</span></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="#hombres">Hombre</a>
+            <a href="#mujeres">Mujer</a>
+            <a href="#sobre-nosotros">Nuestra historia</a>
+            <a href="#mapa">El local</a>
         </nav>
-        <div>
-            <section class="seccion-hombres">
-                <h2>Sección de caballeros</h2>
-                <article class="articulo-hombres">
-                    <div class="hombres">
-                        <h2 id="hombres">Hombres</h2>
-                        <ul>
-                            <li><a href="#trajes">Trajes</a></li>
-                            <li><a href="#relojes">Relojes</a></li>
-                            <li><a href="#anteojos">Anteojos</a></li>
-                            <li><a href="#dijes">Dijes</a></li>
-                        </ul>
+        <a class="bag-link" href="#catalogo" aria-label="Bolsa de compras">
+            Bolsa <span class="bag-count" id="bag-count" aria-live="polite">0</span>
+        </a>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Una forma de estar</p>
+                <h1 id="hero-title">El detalle<br>hace al estilo.</h1>
+                <p class="hero-description">Piezas elegidas para acompañarte hoy y seguir con vos mañana.</p>
+                <a class="button button-dark" href="#catalogo">Descubrí la colección <span aria-hidden="true">↗</span></a>
+                <span class="hero-index">BUENOS AIRES · DESDE PRINCIPIOS DEL SIGLO XX</span>
+            </div>
+            <div class="hero-image" role="img" aria-label="Look de sastrería elegante"></div>
+            <div class="hero-caption">01 / ESENCIA DROCCA</div>
+        </section>
+
+        <section class="intro-strip" aria-label="La propuesta Drocca">
+            <span>CALIDAD QUE SE SIENTE</span><i aria-hidden="true">✳</i>
+            <span>CLÁSICOS CON CARÁCTER</span><i aria-hidden="true">✳</i>
+            <span>DETALLES QUE PERDURAN</span>
+        </section>
+
+        <section class="catalog-section" id="catalogo">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Encontrá tu próximo favorito</p>
+                    <h2>La colección</h2>
+                </div>
+                <p class="section-note">Una selección para cada momento,<br>con el sello de siempre.</p>
+            </div>
+
+            <section class="collection" aria-labelledby="hombres">
+                <div class="collection-heading">
+                    <div>
+                        <span class="collection-number">01 — COLECCIÓN</span>
+                        <h2 id="hombres">Para ellos</h2>
                     </div>
-                </article>
-                <article class="articulo-trajes">
-                    <div class="trajes">
-                        <h3 id="trajes">Trajes</h3>
-                        <div class="fotos-trajes" id="ContainerTrajesH-id"></div>
-                    </div>
-                </article>
-                <article class="articulo-relojes">
-                    <div class="relojes">
-                        <h3 id="relojes">Relojes</h3>
-                        <div class="fotos-relojes" id="ContainerRelojes-id"></div>
-                    </div>
-                </article>
-                <article class="articulo-anteojos">
-                    <div class="anteojos">
-                        <h3 id="anteojos">Anteojos</h3>
-                        <div class="fotos-anteojos" id="ContainerAnteojos-id"></div>
-                    </div>
-                </article>
-                <article class="articulo.dijes">
-                    <div class="dijes">
-                        <h3 id="dijes">Dijes</h3>
-                        <div class="fotos-dijes" id="ContainerDijes-id"></div>
-                    </div>
-                </article>
+                    <nav class="category-nav" aria-label="Categorías de hombre">
+                        <a href="#trajes">Trajes</a><a href="#relojes">Relojes</a>
+                        <a href="#anteojos">Anteojos</a><a href="#dijes">Dijes</a>
+                    </nav>
+                </div>
+                <section class="product-section" aria-labelledby="trajes">
+                    <h3 id="trajes">Sastrería <span>01</span></h3>
+                    <div class="product-grid" id="ContainerTrajesH-id"></div>
+                </section>
+                <section class="product-section" aria-labelledby="relojes">
+                    <h3 id="relojes">Relojería <span>02</span></h3>
+                    <div class="product-grid" id="ContainerRelojes-id"></div>
+                </section>
+                <section class="product-section" aria-labelledby="anteojos">
+                    <h3 id="anteojos">Anteojos <span>03</span></h3>
+                    <div class="product-grid" id="ContainerAnteojos-id"></div>
+                </section>
+                <section class="product-section" aria-labelledby="dijes">
+                    <h3 id="dijes">Dijes <span>04</span></h3>
+                    <div class="product-grid" id="ContainerDijes-id"></div>
+                </section>
             </section>
-        </div>
-        <section class="seccion-mujeres">
-            <h2>Sección de damas</h2>
-            <article class="articulo-mujeres">
-                <div class="mujeres">
-                    <h2 id="mujeres">Mujeres</h2>
-                    <ul>
-                        <li><a href="#trajesm">Trajes</a></li>
-                        <li><a href="#carteras">Carteras</a></li>
-                        <li><a href="#colgantes">Colgantes</a></li>
-                        <li><a href="#perfumes">Perfumes</a></li>
-                    </ul>
+
+            <section class="collection collection-women" aria-labelledby="mujeres">
+                <div class="collection-heading">
+                    <div>
+                        <span class="collection-number">02 — COLECCIÓN</span>
+                        <h2 id="mujeres">Para ellas</h2>
+                    </div>
+                    <nav class="category-nav" aria-label="Categorías de mujer">
+                        <a href="#trajesm">Trajes</a><a href="#carteras">Carteras</a>
+                        <a href="#colgantes">Colgantes</a><a href="#perfumes">Perfumes</a>
+                    </nav>
                 </div>
-            </article>
-            <article class="articulo-trajesm">
-                <div class="trajesm">
-                    <h3 id="trajesm">Trajes</h3>
-                    <div class="fotos-trajesm" id="ContainerTrajesM-id"></div>
-                </div>
-            </article>
-            <article class="articulo-carteras">
-                <div class="carteras">
-                    <h3 id="carteras">Carteras</h3>
-                    <div class="fotos-carteras" id="ContainerCarteras-id"></div>
-                </div>
-            </article>
-            <article class="articulo-colgantes">
-                <div class="colgantes">
-                    <h3 id="colgantes">Colgantes</h3>
-                    <div class="fotos-colgantes" id="ContainerColgantes-id"></div>
-                </div>
-            </article>
-            <article class="articulo-perfumes">
-                <div class="perfumes">
-                    <h3 id="perfumes">Perfumes</h3>
-                    <div class="fotos-perfumes" id="ContainerPerfumes-id"></div>
-                </div>
-            </article>
+                <section class="product-section" aria-labelledby="trajesm">
+                    <h3 id="trajesm">Sastrería <span>01</span></h3>
+                    <div class="product-grid" id="ContainerTrajesM-id"></div>
+                </section>
+                <section class="product-section" aria-labelledby="carteras">
+                    <h3 id="carteras">Carteras <span>02</span></h3>
+                    <div class="product-grid" id="ContainerCarteras-id"></div>
+                </section>
+                <section class="product-section" aria-labelledby="colgantes">
+                    <h3 id="colgantes">Colgantes <span>03</span></h3>
+                    <div class="product-grid" id="ContainerColgantes-id"></div>
+                </section>
+                <section class="product-section" aria-labelledby="perfumes">
+                    <h3 id="perfumes">Perfumería <span>04</span></h3>
+                    <div class="product-grid" id="ContainerPerfumes-id"></div>
+                </section>
+            </section>
         </section>
-        <section class="sobre-nosotros">
-            <div class="nosotros" id="sobre-nosotros">
-                <h2>Sobre Nosotros</h2>
-                <p>Drocca es una empresa italiana que desde principios del siglo XX trabaja junto con diferentes marcas de la mejor calidad reconocidas mundialmente.</p>
-                <p>En Drocca nos encargamos de importar los últimos lanzamientos de estas empresas y así poder brindarle a nuestros clientes un producto de gran nivel.</p>
+
+        <section class="about-section" id="sobre-nosotros">
+            <div class="about-image" role="img" aria-label="Elegancia clásica en cada detalle"></div>
+            <div class="about-copy">
+                <p class="eyebrow">Desde principios del siglo XX · Buenos Aires</p>
+                <h2>Vestir bien<br>es sentirse bien.</h2>
+                <p>En Drocca creemos que el estilo está en elegir con intención. Desde hace generaciones acercamos piezas de calidad, seleccionadas por su diseño, sus materiales y esos detalles que las hacen especiales.</p>
+                <a class="text-link" href="#contacto">Conocé más sobre Drocca <span aria-hidden="true">→</span></a>
             </div>
         </section>
-        <section class="seccion-mapa">
-            <div class="mapa">
-                <h2 id="mapa">Local</h2>
-                <p>Encontranos en Vedia al 3600</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105077.01836939614!2d-58.386022399999995!3d-34.6128384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6c049b27a89%3A0xb4aff81f5c83b76b!2sDOT%20Baires%20Shopping!5e0!3m2!1sen!2sar!4v1683120330612!5m2!1sen!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <section class="store-section" id="mapa">
+            <div class="store-copy">
+                <p class="eyebrow">Te esperamos</p>
+                <h2>Un encuentro<br>en persona.</h2>
+                <p>Vedia al 3600<br>Buenos Aires, Argentina</p>
+                <a class="text-link" href="https://maps.google.com/?q=DOT+Baires+Shopping" target="_blank" rel="noopener noreferrer">Cómo llegar <span aria-hidden="true">↗</span></a>
             </div>
+            <iframe title="Ubicación de Drocca en Buenos Aires" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105077.01836939614!2d-58.386022399999995!3d-34.6128384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6c049b27a89%3A0xb4aff81f5c83b76b!2sDOT%20Baires%20Shopping!5e0!3m2!1sen!2sar!4v1683120330612!5m2!1sen!2sar" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </section>
-        <footer>
-            <div class="contacto" id="contacto">
-                <h2>Contacto</h2>
-                <p>También podes encontrarnos en nuestras redes sociales</p>
-                <ul>
-                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
-                </ul>
-            </div>
-            <p class="copyright">© 2023 Drocca</p>
-        </footer>
-       
     </main>
- <script src="js/main.js"></script>
+
+    <footer id="contacto">
+        <div class="footer-main">
+            <div>
+                <a class="wordmark footer-wordmark" href="#inicio">drocca<span>.</span></a>
+                <p>Estilo que perdura.</p>
+            </div>
+            <div class="footer-contact">
+                <p class="eyebrow">Sigamos en contacto</p>
+                <p>Encontranos también en nuestras redes.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter ↗</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 Drocca</span><span>Buenos Aires, Argentina</span></div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
